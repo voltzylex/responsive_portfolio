@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:responsive_portfolio/home_page.dart';
-import 'package:responsive_portfolio/splash_page.dart';
+
+import 'package:responsive_portfolio/view/splash/splash_page.dart';
 
 part 'routes_config.g.dart';
 
@@ -13,11 +13,11 @@ final GoRouter goRouter = GoRouter(
 
 @TypedGoRoute<SplashRoute>(
   path: '/',
-  routes: <TypedGoRoute<GoRouteData>>[
-    TypedGoRoute<HomePage>(
-      path: 'home',
-    )
-  ],
+  // routes: <TypedGoRoute<GoRouteData>>[
+  //   TypedGoRoute<HomePage>(
+  //     path: 'home',
+  //   )
+  // ],
 )
 class SplashRoute extends GoRouteData {
 

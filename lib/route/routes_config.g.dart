@@ -13,12 +13,6 @@ List<RouteBase> get $appRoutes => [
 RouteBase get $splashRoute => GoRouteData.$route(
       path: '/',
       factory: $SplashRouteExtension._fromState,
-      routes: [
-        GoRouteData.$route(
-          path: 'home',
-          factory: $HomePageExtension._fromState,
-        ),
-      ],
     );
 
 extension $SplashRouteExtension on SplashRoute {
@@ -26,28 +20,6 @@ extension $SplashRouteExtension on SplashRoute {
 
   String get location => GoRouteData.$location(
         '/',
-      );
-
-  void go(BuildContext context) => context.go(location);
-
-  Future<T?> push<T>(BuildContext context) => context.push<T>(location);
-
-  void pushReplacement(BuildContext context) =>
-      context.pushReplacement(location);
-
-  void replace(BuildContext context) => context.replace(location);
-}
-
-extension $HomePageExtension on HomePage {
-  static HomePage _fromState(GoRouterState state) => HomePage(
-        name: state.uri.queryParameters['name']!,
-      );
-
-  String get location => GoRouteData.$location(
-        '/home',
-        queryParams: {
-          'name': name,
-        },
       );
 
   void go(BuildContext context) => context.go(location);
