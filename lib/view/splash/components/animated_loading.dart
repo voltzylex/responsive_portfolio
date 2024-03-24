@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gradient_widgets/gradient_widgets.dart';
 import 'package:responsive_portfolio/res/constants.dart';
 
 class AnimatedLoading extends StatelessWidget {
@@ -18,8 +19,12 @@ class AnimatedLoading extends StatelessWidget {
               const SizedBox(
                 height: defaultPadding / 2,
               ),
-              LinearProgressIndicator(
+              // LinearProgressIndicator(
+              //   value: value,
+              // ),
+              GradientProgressIndicator(
                 value: value,
+                gradient: const LinearGradient(colors: [pinkColor, blueColor]),
               ),
               Text(
                 "${(value * 100).toInt()}%",
