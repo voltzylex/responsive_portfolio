@@ -28,6 +28,12 @@ class _AnimatedImageContainerState extends State<AnimatedImageContainer> with Si
   }
 
   @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
     return AnimatedBuilder(

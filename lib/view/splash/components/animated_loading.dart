@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gradient_widgets/gradient_widgets.dart';
 import 'package:responsive_portfolio/res/constants.dart';
+import 'package:responsive_portfolio/view/splash/components/gradient_progress_indicator.dart';
 
 class AnimatedLoading extends StatelessWidget {
   const AnimatedLoading({super.key});

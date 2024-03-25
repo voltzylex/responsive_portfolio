@@ -8,3 +8,4 @@ const bgColor = Color(0xFF000515);
 const defaultPadding = 20.0;
 const pinkColor = Colors.pink;
 const blueColor = Colors.blue;
+const blackColor = Colors.black;
