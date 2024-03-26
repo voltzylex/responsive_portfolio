@@ -1,6 +1,6 @@
 class DesignConfiguration {
   static setSvgPath(String name) {
-    return 'assets/images/$name.svg';
+    return 'assets/icons/$name.svg';
   }
 
   static setPngPath(String name) {

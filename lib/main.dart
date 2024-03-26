@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_portfolio/res/constants.dart';
 import 'package:responsive_portfolio/route/routes_config.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(const MainApp());
 }
 

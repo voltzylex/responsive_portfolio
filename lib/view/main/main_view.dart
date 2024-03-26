@@ -7,8 +7,8 @@ import 'package:responsive_portfolio/view/main/navigation_button_list.dart';
 import 'package:responsive_portfolio/view/main/top_navigation_bar.dart';
 
 class MainView extends StatelessWidget {
-  const MainView({super.key});
-
+  const MainView({super.key, required this.pages});
+  final List<Widget> pages;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +25,13 @@ class MainView extends StatelessWidget {
                   ),
             const SizedBox(height: 80, child: TopNavigationBar()),
             if (Responsive.isLargeMobile(context)) const NavigationButtonList(),
+            Expanded(
+              flex: 9,
+              child: PageView(
+                scrollDirection: Axis.vertical,
+                children: pages,
+              ),
+            )
           ],
         );
       }),
