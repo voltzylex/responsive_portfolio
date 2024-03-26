@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_portfolio/res/constants.dart';
 import 'package:responsive_portfolio/view%20model/responsive.dart';
 import 'package:responsive_portfolio/view/main/drawer/drawer.dart';
+import 'package:responsive_portfolio/view/main/navigation_button_list.dart';
 import 'package:responsive_portfolio/view/main/top_navigation_bar.dart';
 
 class MainView extends StatelessWidget {
@@ -23,6 +24,7 @@ class MainView extends StatelessWidget {
                     height: defaultPadding / 2,
                   ),
             const SizedBox(height: 80, child: TopNavigationBar()),
+            if (Responsive.isLargeMobile(context)) const NavigationButtonList(),
           ],
         );
       }),

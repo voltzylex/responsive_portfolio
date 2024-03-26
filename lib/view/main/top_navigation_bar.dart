@@ -4,6 +4,7 @@ import 'package:responsive_portfolio/res/widgets/design.dart';
 import 'package:responsive_portfolio/view%20model/responsive.dart';
 import 'package:responsive_portfolio/view/intro/component/menu_button.dart';
 import 'package:responsive_portfolio/view/main/connect_button.dart';
+import 'package:responsive_portfolio/view/main/navigation_button_list.dart';
 
 class TopNavigationBar extends StatelessWidget {
   const TopNavigationBar({super.key});
@@ -21,9 +22,12 @@ class TopNavigationBar extends StatelessWidget {
               ? MenuButton(ontap: () => Scaffold.of(context).openDrawer())
               : Image.asset(DesignConfiguration.setPngPath("triangle_icon")),
         ),
-
         const Spacer(
-          flex: 5,
+          flex: 2,
+        ),
+        if (!Responsive.isLargeMobile(context)) const NavigationButtonList(),
+        const Spacer(
+          flex: 2,
         ),
         const Connectbutton(),
         const Spacer(),
