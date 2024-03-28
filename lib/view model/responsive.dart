@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_portfolio/res/helpers.dart';
 
 class Responsive extends StatelessWidget {
   final Widget desktop;
@@ -33,22 +32,19 @@ class Responsive extends StatelessWidget {
 
   const Responsive(
       {super.key, required this.desktop, this.largeMobile, required this.mobile, this.tablet, this.extraLargeScreen});
-
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-    
-      if (constraints.maxWidth > 1400 && extraLargeScreen != null) {
-        return extraLargeScreen!;
-      } else if (constraints.maxWidth >= 1080) {
-        return desktop;
-      } else if (constraints.maxWidth >= 700 && tablet != null) {
-        return tablet!;
-      } else if (constraints.maxWidth >= 500 && largeMobile != null) {
-        return largeMobile!;
-      } else {
-        return mobile;
-      }
-    });
+    final Size size = MediaQuery.of(context).size;
+    if (size.width > 1400 && extraLargeScreen != null) {
+      return extraLargeScreen!;
+    } else if (size.width >= 1080) {
+      return desktop;
+    } else if (size.width >= 700 && tablet != null) {
+      return tablet!;
+    } else if (size.width >= 500 && largeMobile != null) {
+      return largeMobile!;
+    } else {
+      return mobile;
+    }
   }
 }
