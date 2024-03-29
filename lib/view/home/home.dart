@@ -7,10 +7,21 @@ class HomePage extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) {
     // printLog("Screen width:${MediaQuery.sizeOf(context).width}");
-    return const MainView(
-      pages: [
-        Introdunction(),
-      ],
-    );
+    final size = MediaQuery.sizeOf(context).width;
+    return size < 300
+        ? pleaseIncreaseScreen(context)
+        : const MainView(
+            pages: [
+              Introdunction(),
+            ],
+          );
   }
+}
+
+Widget pleaseIncreaseScreen(BuildContext context) {
+  return const Scaffold(
+    body: Center(
+      child: Text("Please increase the screen Size"),
+    ),
+  );
 }

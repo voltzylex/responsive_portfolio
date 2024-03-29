@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_portfolio/view%20model/responsive.dart';
-import 'package:responsive_portfolio/view/intro/animated_image_container.dart';
 import 'package:responsive_portfolio/view/intro/component/intro_body.dart';
 import 'package:responsive_portfolio/view/intro/component/menu_button.dart';
 import 'package:responsive_portfolio/view/intro/component/social_media_list.dart';
@@ -18,8 +17,7 @@ class Introdunction extends StatelessWidget {
         widthGap(size, 0.02),
         if (!Responsive.isLargeMobile(context)) const SocialMediaList(),
         widthGap(size, 0.07),
-        
-      Expanded(child: IntroBody())
+        const Expanded(child: IntroBody())
       ],
     );
   }
