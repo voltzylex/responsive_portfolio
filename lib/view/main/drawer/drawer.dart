@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_portfolio/res/constants.dart';
 import 'package:responsive_portfolio/view/main/drawer/about.dart';
+import 'package:responsive_portfolio/view/main/drawer/contact_icon.dart';
+import 'package:responsive_portfolio/view/main/drawer/knowledges.dart';
 import 'package:responsive_portfolio/view/main/drawer/my_skills.dart';
 import 'package:responsive_portfolio/view/main/drawer/personal_info.dart';
 
@@ -23,12 +25,12 @@ class CustomDrawer extends StatelessWidget {
                   children: [
                     PersonalInfo(),
                     MySKills(),
-                    // Knowledges(),
+                    Knowledges(),
                     Divider(),
                     SizedBox(
                       height: defaultPadding,
                     ),
-                    // ContactIcon(),
+                    ContactIcon(),
                   ],
                 ),
               ),

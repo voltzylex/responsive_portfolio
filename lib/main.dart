@@ -31,6 +31,9 @@ class MainApp extends StatelessWidget {
               bodyLarge: const TextStyle(color: bodyTextColor),
               bodyMedium: const TextStyle(color: bodyTextColor),
             ),
+        scrollbarTheme: const ScrollbarThemeData().copyWith(
+          thumbColor: MaterialStateProperty.all(Colors.transparent),
+        ),
       ),
     );
   }
