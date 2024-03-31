@@ -11,3 +11,4 @@ const defaultPadding = 20.0;
 const pinkColor = Colors.pink;
 const blueColor = Colors.blue;
 const blackColor = Colors.black;
+const cyanColor = Colors.cyan;
