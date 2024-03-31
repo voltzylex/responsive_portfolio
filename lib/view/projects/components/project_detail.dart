@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_portfolio/res/constants.dart';
 import 'package:responsive_portfolio/view%20model/responsive.dart';
-import 'package:responsive_portfolio/view/projects/components/project_stack.dart';
+import 'package:responsive_portfolio/view/projects/components/project_link.dart';
 
 class ProjectDetail extends StatelessWidget {
   final int index;
@@ -30,7 +30,8 @@ class ProjectDetail extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
         ),
         const Spacer(),
-        ProjectStack(index: index),
+        // dont type previous page it will give an unexpected error
+        ProjectLinks(index: index),
         const SizedBox(height: defaultPadding / 2),
       ],
     );
