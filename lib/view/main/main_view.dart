@@ -6,6 +6,8 @@ import 'package:responsive_portfolio/view/main/drawer/drawer.dart';
 import 'package:responsive_portfolio/view/main/navigation_button_list.dart';
 import 'package:responsive_portfolio/view/main/top_navigation_bar.dart';
 
+final pageController = PageController();
+
 class MainView extends StatelessWidget {
   const MainView({super.key, required this.pages});
   final List<Widget> pages;
@@ -27,7 +29,9 @@ class MainView extends StatelessWidget {
             if (Responsive.isLargeMobile(context)) const NavigationButtonList(),
             Expanded(
               flex: 9,
+
               child: PageView(
+                controller: pageController,
                 scrollDirection: Axis.vertical,
                 children: pages,
               ),

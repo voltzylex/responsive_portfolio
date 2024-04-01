@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_portfolio/res/constants.dart';
 import 'package:responsive_portfolio/view%20model/responsive.dart';
+import 'package:responsive_portfolio/view/main/main_view.dart';
 import 'package:responsive_portfolio/view/main/navigation_button.dart';
 
 class NavigationButtonList extends StatelessWidget {
@@ -20,10 +21,13 @@ class NavigationButtonList extends StatelessWidget {
             children: [
               NavigationButton(
                 text: "Home",
-                onTap: () {},
+                onTap: () => pageController.animateToPage(0, duration: Durations.short4, curve: Curves.bounceIn),
               ),
               if (!Responsive.isLargeMobile(context)) const NavigationButton(text: "About us", onTap: null),
-              const NavigationButton(text: "Project", onTap: null),
+              NavigationButton(
+                text: "Project",
+                onTap: () => pageController.animateToPage(1, duration: Durations.short4, curve: Curves.bounceIn),
+              ),
               const NavigationButton(text: "Certification", onTap: null),
               const NavigationButton(text: "Archievment", onTap: null),
             ],

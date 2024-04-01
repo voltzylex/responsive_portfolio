@@ -14,7 +14,7 @@ class TittleText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         projectText(prefix, context),
-        !kIsWeb && Responsive.isDesktop(context)
+        kIsWeb && Responsive.isDesktop(context)
             ? ShaderMask(
                 shaderCallback: (bounds) => const LinearGradient(
                   colors: [pinkColor, cyanColor],
