@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:responsive_portfolio/res/constants.dart';
 import 'package:responsive_portfolio/view%20model/responsive.dart';
 
-class TittleText extends StatelessWidget {
+class TitleText extends StatelessWidget {
   final String title;
   final String prefix;
-  const TittleText({super.key, required this.title, required this.prefix});
+  const TitleText({super.key, required this.title, required this.prefix});
 
   @override
   Widget build(BuildContext context) {

@@ -8,9 +8,7 @@ class ProjectBloc extends Bloc<ProjectEvent, ProjectState> {
   ProjectBloc() : super(ProjectInitial()) {
     on<ProjectEvent>((event, emit) {});
     on<HoveredEvent>((event, emit) {
-      emit(ProjectHoverd(i: event.i,isHovered: event.isHovered));
-      
-
+      emit(ProjectHoverd(i: event.i, isHovered: event.isHovered));
     });
   }
 }

@@ -28,7 +28,10 @@ class NavigationButtonList extends StatelessWidget {
                 text: "Project",
                 onTap: () => pageController.animateToPage(1, duration: Durations.short4, curve: Curves.bounceIn),
               ),
-              const NavigationButton(text: "Certification", onTap: null),
+              NavigationButton(
+                text: "Certification",
+                onTap: () => pageController.animateToPage(2, duration: Durations.short4, curve: Curves.bounceIn),
+              ),
               const NavigationButton(text: "Archievment", onTap: null),
             ],
           ),

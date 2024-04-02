@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:responsive_portfolio/view/certifications/certifications.dart';
 import 'package:responsive_portfolio/view/intro/introduction_page.dart';
 import 'package:responsive_portfolio/view/main/main_view.dart';
 import 'package:responsive_portfolio/view/projects/project_view.dart';
@@ -15,6 +16,7 @@ class HomePage extends GoRouteData {
             pages: [
               Introdunction(),
               ProjectView(),
+              Certifications(),
             ],
           );
   }

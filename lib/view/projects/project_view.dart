@@ -17,7 +17,7 @@ class ProjectView extends StatelessWidget {
         body: Column(
           children: [
             if (Responsive.isLargeMobile(context)) const SizedBox(height: defaultPadding),
-            const TittleText(title: "Project", prefix: "Latest"),
+            const TitleText(title: "Project", prefix: "Latest"),
             const SizedBox(
               height: defaultPadding,
             ),
