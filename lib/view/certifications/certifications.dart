@@ -35,8 +35,8 @@ class Certifications extends StatelessWidget {
                     largeMobile: CertificateGrid(crossAxisCount: 1, aspectRatio: 1.8),
                     mobile: CertificateGrid(crossAxisCount: 1, aspectRatio: 1.4),
                     tablet: CertificateGrid(
-                      aspectRatio: 1.7,
                       crossAxisCount: 2,
+                      aspectRatio: 1.7,
                     )))
           ],
         ),
