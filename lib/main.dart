@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
         scaffoldBackgroundColor: bgColor,
         primaryColor: primaryColor,
         colorScheme: const ColorScheme.dark().copyWith(
-          background: bgColor,
+          surface: bgColor,
         ),
         useMaterial3: true,
         textTheme: GoogleFonts.openSansTextTheme(Theme.of(context).textTheme)
@@ -38,3 +38,6 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+/*
+firebase deploy
+*/
